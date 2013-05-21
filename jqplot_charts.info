@@ -1,0 +1,6 @@
+name = "jqPlot Charting library"
+description = "jQPlot library module"
+core = 7.x
+package = libraries
+version = 7.x-1.x-dev
+dependencies[] = libraries
