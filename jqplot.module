@@ -2,9 +2,9 @@
 
 /**
  * @file
- * Implements hook_library();
+ * Implements hook_library_info();
  */
-function jqplot_library() {
+function jqplot_library_info() {
 
   $libraries['jqplot'] = array(
     'name' => 'jQPlot charting library',
@@ -12,11 +12,15 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot') . '/jquery.jqplot.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
-      libraries_get_path('jqplot') . '/plugins/jqplot.pointLabels.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/jquery.jqplot.min.js' => array(),
+      libraries_get_path('jqplot') . '/plugins/jqplot.pointLabels.min.js' => array(),
     ),
     'css' => array(
-      libraries_get_path('jqplot') . '/jquery.jqplot.css' => array('group' => CSS_DEFAULT),
+      libraries_get_path('jqplot') . '/jquery.jqplot.css' => array('type' => 'file'),
+    ),
+    'dependencies' => array(
+      array('system', 'jquery'),
+      array('system', 'drupal'),
     ),
   );
 
@@ -26,7 +30,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.json2.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.json2.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -39,7 +43,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.barRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.barRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -52,7 +56,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.BezierCurveRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.BezierCurveRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -65,7 +69,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.blockRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.blockRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -78,7 +82,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.bubbleRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.bubbleRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -91,7 +95,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.canvasAxisLabelRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.canvasAxisLabelRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -104,7 +108,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.canvasAxisTickRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.canvasAxisTickRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -118,7 +122,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.canvasOverlay.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.canvasOverlay.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -132,7 +136,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.canvasTextRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.canvasTextRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -146,7 +150,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.categoryAxisRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.categoryAxisRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -159,7 +163,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.ciParser.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.ciParser.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -172,7 +176,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot') . '/plugins/jqplot.cursor.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.cursor.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -185,7 +189,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot') . '/plugins/jqplot.dateAxisRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.dateAxisRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -198,7 +202,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.donutRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.donutRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -211,7 +215,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.dragable.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.dragable.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -224,7 +228,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.enhancedLegendRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.enhancedLegendRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -237,7 +241,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.funnelRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.funnelRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -250,7 +254,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.highlighter.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.highlighter.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -263,7 +267,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.logAxisRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.logAxisRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -276,7 +280,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.mekkoAxisRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.mekkoAxisRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -289,7 +293,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.mekkoRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.mekkoRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -302,7 +306,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.meterGaugeRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.meterGaugeRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -315,7 +319,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.mobile.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.mobile.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -328,7 +332,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.ohlcRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.ohlcRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -341,7 +345,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.pieRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.pieRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -354,7 +358,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.pointLabels.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.pointLabels.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -367,7 +371,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.pyramidAxisRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.pyramidAxisRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -380,7 +384,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.pyramidGridRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.pyramidGridRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -393,7 +397,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.pyramidRenderer.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.pyramidRenderer.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
@@ -406,7 +410,7 @@ function jqplot_library() {
     'download url' => 'www.jqplot.com/',
     'version' => '1.0.8',
     'js' => array(
-      libraries_get_path('jqplot'). '/plugins/jqplot.trendline.min.js' => array('group' => JS_LIBRARY, 'weight' => 0),
+      libraries_get_path('jqplot') . '/plugins/jqplot.trendline.min.js' => array(),
     ),
     'dependencies' => array(
       array('jqplot', 'jqplot'),
