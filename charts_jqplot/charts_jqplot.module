@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Charts module integration with jqPlot library.
+ */
+
+/**
+ * Implements hook_charts_info().
+ */
+function charts_jqplot_charts_info() {
+  $info['jqplot'] = array(
+    'label' => t('jqPlot'),
+    'render' => '_charts_jqplot_render',
+    'types' => array('area', 'bar', 'column', 'line', 'pie'),
+    'file' => 'charts_jqplot.inc',
+  );
+  return $info;
+}

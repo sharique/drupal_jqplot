@@ -1,0 +1,6 @@
+name = jqPlot Charts
+description = Charts module integration with jqPlot library.
+package = Charts
+core = 7.x
+dependencies[] = jqplot
+dependencies[]  = charts
