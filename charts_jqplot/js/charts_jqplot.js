@@ -9,24 +9,13 @@
         data[i][0] = series.labels[i];
         data[i][1] = series.data[i];
       }
-      $.jqplot('jqplot-render', [data], {
-          seriesDefaults: {
-            renderer: $.jqplot.PieRenderer,
-            rendererOptions: {
-              // Put data labels on the pie slices.
-              // By default, labels show the percentage of the slice.
-              showDataLabels: true
-            },
-            showMarker: true,
-            pointLabels: {
-              show: true
-            }
-          },
-          title: series.title
-          //legend: { show:true, location: 'e' }
-        }
-      );
 
+      $('.charts-jqplot').once('charts-jqplot',function(){
+        var config = $.parseJSON($(this).attr('data-chart'));
+        //console.log(config,'config');
+        var div = $(this).attr('id');
+        $.jqplot(div, [data], config);
+      });
     }
   }
 })(jQuery);

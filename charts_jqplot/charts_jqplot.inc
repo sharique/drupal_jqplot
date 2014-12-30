@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Callbacks and utility functions for rendering a jqpot Chart.
+ * Callbacks and utility functions for rendering a jqplot chart.
  */
 
 /**
@@ -12,6 +12,7 @@
  *
  * @param array $chart
  *   The chart renderable.
+ *
  * @return
  *   The modified chart renderable, with necessary #attached, #theme, and
  *   similar properties prepared for rendering.
@@ -19,32 +20,34 @@
 function _charts_jqplot_render($chart) {
 
   $chart_type = $chart['#chart_type'];
-  $renderer = 'jqplot.' . $chart_type . 'Renderer';
+  $plugin = _charts_jqplot_type($chart_type);
+
   $chart['#attached']['library'][] = array(
     'jqplot',
-    $renderer,
-    'jqplot.barRenderer',
+    $plugin['plugin'],
   );
 
   $chart['#attributes']['class'][] = 'charts-jqplot';
-  //$chart['#chart_definition'] = $chart_definition;
+  $chart_definition = array();
+  $chart_definition = _charts_jqplot_populate_chart_options($chart, $chart_definition);
 
-  //$series = _charts_jqplot_get_date($chart);
   $series = array(
     'data' => $chart[$chart_type . '_data']['#data'],
-    'labels' =>$chart[$chart_type . '_data']['#labels'],
-    'title'=> $chart[$chart_type . '_data']['#title'],
+    'labels' => $chart[$chart_type . '_data']['#labels'],
+    'title' => $chart[$chart_type . '_data']['#title'],
   );
 
   $chart['#attached']['js'][] = array(
-    'data' => array('series' => $series, 'renderer' => $renderer),
+    'data' => array('series' => $series),
     'type' => 'setting',
   );
-  $chart['#attached']['js'][] = drupal_get_path('module','charts_jqplot').'/js/charts_jqplot.js';
+  $chart['#attached']['js'][] = drupal_get_path('module', 'charts_jqplot') . '/js/charts_jqplot.js';
 
   if (!isset($chart['#id'])) {
     $chart['#id'] = drupal_html_id('jqplot-render');
   }
+
+  $chart['#chart_definition'] = $chart_definition;
   return $chart;
 }
 
@@ -57,7 +60,10 @@ function _charts_jqplot_type($renderable_type) {
     'bar_chart' => 'BarChart',
     'column_chart' => 'ColumnChart',
     'line_chart' => 'LineChart',
-    'pie_chart' => 'PieChart',
+    'pie' => array(
+      'renderer' => '$.jqplot.PieRenderer',
+      'plugin' => 'jqplot.pieRenderer'
+    ),
     'scatter_chart' => 'ScatterChart',
   );
   drupal_alter('charts_jqplot_types', $types);
@@ -65,6 +71,18 @@ function _charts_jqplot_type($renderable_type) {
 }
 
 
-function _charts_jqplot_get_date($chart) {
+function _charts_jqplot_populate_chart_options($chart, $chart_definition) {
   $chart_type = $chart['#chart_type'];
+  $plugin = _charts_jqplot_type($chart_type);
+
+  $chart_definition['seriesDefaults'] = array(
+    'rendererOptions' => array(
+      'showDataLabels' => $chart['#data_labels'],
+    ),
+    'showMarker'=> TRUE,
+    'title'=> $chart['#title'],
+    'renderer'=>$plugin['renderer'],
+  );
+
+  return $chart_definition;
 }
