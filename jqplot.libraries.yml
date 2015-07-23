@@ -1,0 +1,401 @@
+jqplot.example:
+  version: VERSION
+  js:
+    js/jqplot_example.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+jqplot:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/jquery.jqplot.min.js: { weight: 0, group: JS_LIBRARY}
+    /libraries/jquery.jqplot/plugins/jqplot.pointLabels.min.js: { weight: 0, group: JS_LIBRARY}
+  css:
+    theme:
+      /libraries/jquery.jqplot/jquery.jqplot.css: {}
+      /libraries/jquery.jqplot/jquery.jqplot.min.css: {}
+
+jqplot.json2:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.json2.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.barRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.barRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+
+jqplot.BezierCurveRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.BezierCurveRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.bubbleRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.bubbleRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.canvasAxisLabelRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+#Canvas Overlay plugin
+jqplot.canvasOverlay:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.canvasOverlay.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.canvasTextRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.canvasTextRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.categoryAxisRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.categoryAxisRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.ciParser:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.ciParser.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.cursor:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.cursor.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.dateAxisRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.dateAxisRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.donutRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.donutRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.dragable:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.dragable.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.enhancedLegendRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.enhancedLegendRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.funnelRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.funnelRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.highlighter:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.highlighter.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.logAxisRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.logAxisRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.mekkoRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.mekkoRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.meterGaugeRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.meterGaugeRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.mobile:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.mobile.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.ohlcRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.ohlcRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.pieRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.pieRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.pointLabels:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.pointLabels.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.pyramidAxisRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.pyramidAxisRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.pyramidGridRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.pyramidGridRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.pyramidRenderer:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.pyramidRenderer.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
+
+jqplot.trendline:
+  title: jQPlot charting library
+  version: 1.0.8
+  remote: www.jqplot.com/
+  license:
+    name: MIT
+    url: http://www.jqplot.com/docs/files/MIT-LICENSE-txt.html
+    gpl-compatible: true
+  js:
+    /libraries/jquery.jqplot/plugins/jqplot.trendline.min.js: { weight: 0, group: JS_LIBRARY}
+  dependencies:
+    - core/jquery
+    - jqplot/jqplot
