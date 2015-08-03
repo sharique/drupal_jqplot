@@ -2,7 +2,6 @@ name: jqPlot Charting library
 type: module
 description: "jQPlot library module"
 core: 8.x
-version: 8.x-1.x-dev
 package: charts
 tags:
  - developer
