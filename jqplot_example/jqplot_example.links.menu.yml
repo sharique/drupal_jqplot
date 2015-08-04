@@ -1,0 +1,28 @@
+jqplot.example:
+  title: jqplot Example
+  description: Some Static Example about the jqPlot plotting and charting plugin.
+  route_name: jqplot.example
+
+jqplot.lineCharts:
+  title: jqplot line Chart Example
+  description: Some Static Example about the jqPlot Line Charts.
+  route_name: jqplot.lineCharts
+  parent: jqplot.example
+  weight: -10
+
+jqplot.BarCharts:
+  title: jqplot Bar Charts Example
+  description: Some Static Example about the jqPlot Bar Charts.
+  route_name: jqplot.BarCharts
+  parent: jqplot.example
+  weight: -9
+
+jqplot.PieCharts:
+  title: jqplot Pie Charts Example
+  description: Some Static Example about the jqPlot Pie Charts.
+  route_name: jqplot.PieCharts
+  parent: jqplot.example
+  weight: -9
+
+
+
