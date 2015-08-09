@@ -24,15 +24,15 @@ function jqplot_help($route_name, RouteMatchInterface $route_match) {
       $output .= t('1. Extract the module files to the "<root>/modules" directory. It should now contain a "jqplot" folder or download it using drush.') . '</br>';
       $output .= t('2. Enable the module in the "Administration panel > Modules > charts" section.') . '</br>';
       $output .= t('3. Create a custom module to include js files and to add plot.') . '</br>';
-      $output .= '4. <b>' . t('Add a plot container'). '</b></br>';
+      $output .= '4. <b>' . t('Add a plot container') . '</b></br>';
       $output .= t('Add a container (target) to your web page where you want your plot to show up.  Be sure to give your target a width and a height:</br>');
       $output .= '#markup => div id="chart-pie" class="jqplot-target".</br>';
       $output .= '5. <b>' . t('Include the js Files') . '</b></br>';
-      $output .= t("['#attached']['library'][] = 'jqplot/jqplot.pieRenderer;</br>");
+      $output .= t("['#attached']['library'][] = 'jqplot/jqplot.pieRenderer.min;</br>");
       $output .= t("['#attached']['library'][] = 'jqplot_example/jqplot.example;</br>");
       $output .= '6. <b>' . t('Create a plot') . '</b></br>';
       $output .= t('Then, create the actual plot by calling the $.jqplot plugin with the id of your target and some data from .js files:<br>');
       $output .= t("$.jqplot ('chart-pie', [[3,7,9,1,4,6,8,2,5]]);");
-    return $output;
+      return $output;
   }
 }

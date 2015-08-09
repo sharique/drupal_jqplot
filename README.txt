@@ -38,7 +38,7 @@ Installation / Configuration
    Add a container (target) to your web page where you want your plot to show up.  Be sure to give your target a width and a height:
    '#markup' => '<div id="chart-pie" class="jqplot-target"></div>',
 5. Include the js Files
-   ['#attached']['library'][] = 'jqplot/jqplot.pieRenderer';
+   ['#attached']['library'][] = 'jqplot/jqplot.pieRenderer.min';
    ['#attached']['library'][] = 'jqplot_example/jqplot.example';
 6. Create a plot
    Then, create the actual plot by calling the $.jqplot plugin with the id of your target and some data from .js files:
