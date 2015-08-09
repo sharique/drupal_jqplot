@@ -134,7 +134,7 @@ INFOMARKUP;
     // so created separate variable.
     $top_content = <<<INFOMARKUP
         <ol>
-          <li>Below is a default bar plot. Bars will highlight on mouseover. Events are triggered when you mouseover a bar and also when you click on a bar. Here We capture the 'jqplotDataClick' event and display the clicked series index, point index and data values. When series data is assigned as a 1-dimensional array as in this example, jqPlot automatically converts it into a 2-dimensional array for plotting. So a series defined as [2, 6, 7, 10] will become [[1,2], [2,6], [3,7], [4,10]].</li>
+          <li>Below is a default pie plot. Pie slices highlight when you mouse over.</li>
           <li>Charts on this page may depend on the following plugins:<br>
             <p>['#attached']['library'][] = 'jqplot/jqplot.pieRenderer.min'</p>
           </li>
