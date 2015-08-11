@@ -43,3 +43,5 @@ Installation / Configuration
 6. Create a plot
    Then, create the actual plot by calling the $.jqplot plugin with the id of your target and some data from .js files:
    $.jqplot ('chart-line', [[3,7,9,1,4,6,8,2,5]]);
+7. Libraries Directory Configuration
+   You can Delete examples folder from jquery.jqplot library(e.g:<root>/libraries/jquery.jqplot/examples) for security reasons. You can also delete docs folder(e.g:<root>/libraries/jquery.jqplot/docs), if you want to save some bandwidth and space.

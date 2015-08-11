@@ -32,7 +32,9 @@ function jqplot_help($route_name, RouteMatchInterface $route_match) {
       $output .= t("['#attached']['library'][] = 'jqplot_example/jqplot.example;</br>");
       $output .= '6. <b>' . t('Create a plot') . '</b></br>';
       $output .= t('Then, create the actual plot by calling the $.jqplot plugin with the id of your target and some data from .js files:<br>');
-      $output .= t("$.jqplot ('chart-pie', [[3,7,9,1,4,6,8,2,5]]);");
+      $output .= t("$.jqplot ('chart-pie', [[3,7,9,1,4,6,8,2,5]]);<br>");
+      $output .= '7. <b>' . t('Libraries Directory Configuration') . '</b></br>';
+      $output .= t('You can Delete examples folder from jquery.jqplot library(e.g:<root>/libraries/jquery.jqplot/examples) for security reasons. You can also delete docs folder(e.g:<root>/libraries/jquery.jqplot/docs), if you want to save some bandwidth and space.');
       return $output;
   }
 }
