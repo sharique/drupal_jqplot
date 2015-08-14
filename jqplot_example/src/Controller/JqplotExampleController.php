@@ -58,8 +58,8 @@ class JqplotExampleController extends ControllerBase {
         <ol>
           <li>The following plot uses a number of options to set the title, add axis labels, and shows how to use the canvasAxisLabelRenderer plugin to provide rotated axis labels.</li>
             <li>Charts on this page may depend on the following plugins:<br>
-              <p>['#attached']['library'][] = 'jqplot/jqplot.canvasAxisLabelRenderer'</p>
-              <p>['#attached']['library'][] = 'jqplot/jqplot.canvasTextRenderer'</p>
+              <p>['#attached']['library'][] = 'jqplot/jqplot.canvasAxisLabelRenderer.min'</p>
+              <p>['#attached']['library'][] = 'jqplot/jqplot.canvasTextRenderer.min'</p>
             </li>
         </ol></br>
 INFOMARKUP;
@@ -74,10 +74,9 @@ INFOMARKUP;
     );
 
     // Attach library containing css and js files.
-    $build['#attached']['library'][] = 'jqplot/jqplot.canvasAxisLabelRenderer';
-    $build['#attached']['library'][] = 'jqplot/jqplot.canvasTextRenderer';
+    $build['#attached']['library'][] = 'jqplot/jqplot.canvasAxisLabelRenderer.min';
+    $build['#attached']['library'][] = 'jqplot/jqplot.canvasTextRenderer.min';
     $build['#attached']['library'][] = 'jqplot_example/jqplot.example';
-
     return $build;
   }
 
@@ -97,9 +96,9 @@ INFOMARKUP;
         <ol>
           <li>Below is a default bar plot. Bars will highlight on mouseover. Events are triggered when you mouseover a bar and also when you click on a bar. Here We capture the 'jqplotDataClick' event and display the clicked series index, point index and data values. When series data is assigned as a 1-dimensional array as in this example, jqPlot automatically converts it into a 2-dimensional array for plotting. So a series defined as [2, 6, 7, 10] will become [[1,2], [2,6], [3,7], [4,10]].</li>
           <li>Charts on this page may depend on the following plugins:<br>
-            <p>['#attached']['library'][] = 'jqplot/jqplot.barRenderer'</p>
-            <p>['#attached']['library'][] = 'jqplot/jqplot.categoryAxisRenderer'</p>
-            <p>['#attached']['library'][] = 'jqplot/jqplot.pointLabels'</p>
+            <p>['#attached']['library'][] = 'jqplot/jqplot.barRenderer.min'</p>
+            <p>['#attached']['library'][] = 'jqplot/jqplot.categoryAxisRenderer.min'</p>
+            <p>['#attached']['library'][] = 'jqplot/jqplot.pointLabels.min'</p>
         </li>
         </ol></br>
 INFOMARKUP;
@@ -114,9 +113,9 @@ INFOMARKUP;
     );
 
     // Attach library containing css and js files.
-    $build['#attached']['library'][] = 'jqplot/jqplot.barRenderer';
-    $build['#attached']['library'][] = 'jqplot/jqplot.categoryAxisRenderer';
-    $build['#attached']['library'][] = 'jqplot/jqplot.pointLabels';
+    $build['#attached']['library'][] = 'jqplot/jqplot.barRenderer.min';
+    $build['#attached']['library'][] = 'jqplot/jqplot.categoryAxisRenderer.min';
+    $build['#attached']['library'][] = 'jqplot/jqplot.pointLabels.min';
     $build['#attached']['library'][] = 'jqplot_example/jqplot.example';
     return $build;
   }
@@ -135,9 +134,9 @@ INFOMARKUP;
     // so created separate variable.
     $top_content = <<<INFOMARKUP
         <ol>
-          <li>Below is a default bar plot. Bars will highlight on mouseover. Events are triggered when you mouseover a bar and also when you click on a bar. Here We capture the 'jqplotDataClick' event and display the clicked series index, point index and data values. When series data is assigned as a 1-dimensional array as in this example, jqPlot automatically converts it into a 2-dimensional array for plotting. So a series defined as [2, 6, 7, 10] will become [[1,2], [2,6], [3,7], [4,10]].</li>
+          <li>Below is a default pie plot. Pie slices highlight when you mouse over.</li>
           <li>Charts on this page may depend on the following plugins:<br>
-            <p>['#attached']['library'][] = 'jqplot/jqplot.pieRenderer'</p>
+            <p>['#attached']['library'][] = 'jqplot/jqplot.pieRenderer.min'</p>
           </li>
         </ol></br>
 INFOMARKUP;
@@ -153,7 +152,7 @@ INFOMARKUP;
     );
 
     // Attach library containing css and js files.
-    $build['#attached']['library'][] = 'jqplot/jqplot.pieRenderer';
+    $build['#attached']['library'][] = 'jqplot/jqplot.pieRenderer.min';
     $build['#attached']['library'][] = 'jqplot_example/jqplot.example';
 
     return $build;
