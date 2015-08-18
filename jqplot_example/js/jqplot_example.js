@@ -1,11 +1,16 @@
+/**
+ * @file
+ * Render Static and Dynamics Charts.
+ */
+
 (function ($, Drupal, drupalSettings) {
 
-  //Line Chart
-  if($('#chart-line').length) {
-    //The following plot uses a number of options to set the title,
+  // Line Chart.
+  if ($('#chart-line').length) {
+    // The following plot uses a number of options to set the title,
     // add axis labels, and shows how to use the canvasAxisLabelRenderer
     // plugin to provide rotated axis labels.
-    var plot2 = $.jqplot ('chart-line', [[3,7,9,1,4,6,8,2,5]], {
+    var plot2 = $.jqplot('chart-line', [[3,7,9,1,4,6,8,2,5]], {
       // Give the plot a title.
       title: 'Plot With Options',
       // You can specify options for all axes on the plot at once with
@@ -18,7 +23,7 @@
       // Allowable axes are xaxis, x2axis, yaxis, y2axis, y3axis, ...
       // Up to 9 y axes are supported.
       axes: {
-        // options for each axis are specified in seperate option objects.
+        // Options for each axis are specified in seperate option objects.
         xaxis: {
           label: "X Axis",
           // Turn off "padding".  This will allow data point to lie on the
@@ -33,9 +38,8 @@
     });
   }
 
-
-  //BAR Chart
-  if($('#chart-bar').length) {
+  // BAR Chart.
+  if ($('#chart-bar').length) {
     $.jqplot.config.enablePlugins = true;
     var s1 = [2, 6, 7, 10];
     var ticks = ['a', 'b', 'c', 'd'];
@@ -58,19 +62,19 @@
 
     $('#chart-bar').bind('jqplotDataClick',
         function (ev, seriesIndex, pointIndex, data) {
-            $('#info-bar').html('series: '+seriesIndex+', point: '+pointIndex+', data: '+data);
+            $('#info-bar').html('series: ' + seriesIndex + ', point: ' + pointIndex + ', data: ' + data);
         }
     );
   }
 
-  //Pie Chart
-  if($('#chart-pie').length) {
+  // Pie Chart.
+  if ($('#chart-pie').length) {
 
-   var data = [
+    var data = [
       ['Heavy Industry', 12],['Retail', 9], ['Light Industry', 14],
       ['Out of home', 16],['Commuting', 7], ['Orientation', 9]
     ];
-    var plot1 = $.jqplot ('chart-pie', [data],
+    var plot1 = $.jqplot('chart-pie', [data],
       {
         seriesDefaults: {
           // Make this a pie chart.
@@ -86,11 +90,11 @@
     );
   }
 
-  //Dynamic Pie Chart
-  if($('#chart-dynamic').length) {
-    //Dynamic values for total node from content type.
+  // Dynamic Pie Chart.
+  if ($('#chart-dynamic').length) {
+    // Dynamic values for total node from content type.
     var data = drupalSettings.dynamicPieChart;
-    var plot1 = $.jqplot ('chart-dynamic', [data],
+    var plot1 = $.jqplot('chart-dynamic', [data],
       {
         seriesDefaults: {
           // Make this a pie chart.
@@ -105,6 +109,5 @@
       }
     );
   }
-
 
 })(jQuery, Drupal, drupalSettings);

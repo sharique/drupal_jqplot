@@ -19,7 +19,7 @@ class JqplotExampleController extends ControllerBase {
   /**
    * JqPlot Example info page.
    *
-   * @return array
+   * @return array $build
    *   A renderable array.
    */
   public function info() {
@@ -46,7 +46,7 @@ class JqplotExampleController extends ControllerBase {
   /**
    * Line Chart Example page.
    *
-   * @return array
+   * @return array $build
    *   A renderable array of line chart and info about libraries files.
    */
   public function lineCharts() {
@@ -84,7 +84,7 @@ INFOMARKUP;
   /**
    * BarCharts Example page.
    *
-   * @return array
+   * @return array $build
    *   A renderable array of Bar chart and info about libraries files.
    */
   public function barCharts() {
@@ -159,6 +159,13 @@ INFOMARKUP;
     return $build;
   }
 
+  /**
+   * Dynamic Pie Chart Example Page.
+   *
+   * @return array $build
+   *   A renderable array of Total nid created in content type using  Pie chart
+   *    and info about libraries files.
+   */
   public function dynamicCharts() {
 
     // Start building the content.
@@ -175,24 +182,25 @@ INFOMARKUP;
     $content_type_nids = array();
     foreach ($content_types as $type => $type_name) {
       $query = \Drupal::entityQuery('node')
-      ->condition('type', $type)
-      ->condition('status', 1);
+        ->condition('type', $type)
+        ->condition('status', 1);
 
       if ($nids = $query->execute()) {
         $content_type_nids[$count][] = $type_name;
         $content_type_nids[$count][] = count($nids);
         $content_created = TRUE;
-      } else {
+      }
+      else {
         $content_type_nids[$count][] = $type_name;
         $content_type_nids[$count][] = 0;
       }
       $count++;
     }
 
-     //Set message if no nids found.
-     if(!$content_created) {
-        $no_content = 'Content not found! Please Add content to see Dynamic Pie chart.';
-      }
+    // Set message if no nids found.
+    if (!$content_created) {
+      $no_content = 'Content not found! Please Add content to see Dynamic Pie chart.';
+    }
 
     // Showing code formating warning in $build array(),
     // so created separate variable.
@@ -210,7 +218,7 @@ INFOMARKUP;
       '#markup' => $top_content,
     );
     $build['no_content'] = array(
-      '#markup' => (!empty($no_content)? "<div class='messages messages--error'>" . $no_content  . "</div>" : NULL),
+      '#markup' => (!empty($no_content) ? "<div class='messages messages--error'>" . $no_content . "</div>" : NULL),
     );
 
     // Main container DIV. We give it a unique ID so that the JavaScript can
