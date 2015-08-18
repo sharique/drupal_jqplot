@@ -22,7 +22,13 @@ jqplot.PieCharts:
   description: Some Static Example about the jqPlot Pie Charts.
   route_name: jqplot.PieCharts
   parent: jqplot.example
-  weight: -9
+  weight: -8
 
+jqplot.DynamicCharts:
+  title: jqplot Dynamic Charts Example using Pie Charts
+  description: Dynamic chart Example using jqPlot Pie Charts.
+  route_name: jqplot.DynamicCharts
+  parent: jqplot.example
+  weight: -7
 
 

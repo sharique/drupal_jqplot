@@ -86,5 +86,25 @@
     );
   }
 
+  //Dynamic Pie Chart
+  if($('#chart-dynamic').length) {
+    //Dynamic values for total node from content type.
+    var data = drupalSettings.dynamicPieChart;
+    var plot1 = $.jqplot ('chart-dynamic', [data],
+      {
+        seriesDefaults: {
+          // Make this a pie chart.
+          renderer: $.jqplot.PieRenderer,
+          rendererOptions: {
+            // Put data labels on the pie slices.
+            // By default, labels show the percentage of the slice.
+            showDataLabels: true
+          }
+        },
+        legend: { show:true, location: 'e' }
+      }
+    );
+  }
+
 
 })(jQuery, Drupal, drupalSettings);

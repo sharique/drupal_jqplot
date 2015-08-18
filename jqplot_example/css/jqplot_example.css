@@ -10,13 +10,15 @@ pre code.js-code {
 
 #chart-line,
 #chart-bar,
-#chart-pie {
+#chart-pie,
+#chart-dynamic {
   height: 300px;
   width: 500px;
   position: relative;
   margin-right: auto;
 }
 
-#chart-pie table.jqplot-table-legend {
+#chart-pie table.jqplot-table-legend,
+#chart-dynamic table.jqplot-table-legend {
   width: auto;
 }
