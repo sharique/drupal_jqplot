@@ -29,4 +29,12 @@ jqplot.PieCharts:
     _controller: '\Drupal\jqplot_example\Controller\JqplotExampleController::pieCharts'
   requirements:
     _access: 'TRUE'
+ 
+jqplot.DynamicCharts:
+  path: 'jqplot_example/dynamic_charts'
+  defaults:
+    _title: 'jqPlot Charts Library Example for Pie Charts'
+    _controller: '\Drupal\jqplot_example\Controller\JqplotExampleController::dynamicCharts'
+  requirements:
+    _access: 'TRUE'
 
